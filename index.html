@@ -4,15 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les Caves Saint Sabin - Carte du Bar</title>
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
-    <script defer src="script.js"></script> <!-- Lien vers le fichier JS -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            color: #ff9900;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: linear-gradient(135deg, #111, #333);
+        }
+
+        .menu {
+            background: #222;
+            color: #ff9900;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(255, 153, 0, 0.7);
+            max-width: 700px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            color: #ff9900;
+            text-transform: uppercase;
+            font-size: 36px;
+            text-align: center;
+            letter-spacing: 2px;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ff9900;
+            padding-bottom: 8px;
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #ff9900;
+            transition: color 0.3s;
+        }
+
+        h2:hover {
+            color: #ff6600;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        li {
+            font-size: 20px;
+            padding: 10px 0;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        li:hover {
+            color: #ff6600;
+            transform: translateX(10px);
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #ff9900; }
+            to { text-shadow: 0 0 15px #ff6600; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
 </head>
 <body>
     <div class="menu">
-        <h1 class="hidden">Les Caves Saint Sabin</h1>
+        <h1>Les Caves Saint Sabin</h1>
         
-        <h2 class="hidden">Cocktails</h2>
-        <ul class="hidden">
+        <h2>Cocktails</h2>
+        <ul>
             <li>Mojito - 8€</li>
             <li>Piña Colada - 9€</li>
             <li>Tequila Sunrise - 8€</li>
@@ -20,8 +95,8 @@
             <li>Blue Lagoon - 9€</li>
         </ul>
 
-        <h2 class="hidden">Bières</h2>
-        <ul class="hidden">
+        <h2>Bières</h2>
+        <ul>
             <li>Heineken - 5€</li>
             <li>Guinness - 6€</li>
             <li>Kronenbourg - 4€</li>
@@ -29,16 +104,16 @@
             <li>Leffe Blonde - 6€</li>
         </ul>
 
-        <h2 class="hidden">Vins</h2>
-        <ul class="hidden">
+        <h2>Vins</h2>
+        <ul>
             <li>Rouge Bordeaux - 6€</li>
             <li>Blanc Chardonnay - 7€</li>
             <li>Rosé de Provence - 6€</li>
             <li>Champagne Brut - 12€</li>
         </ul>
 
-        <h2 class="hidden">Spiritueux</h2>
-        <ul class="hidden">
+        <h2>Spiritueux</h2>
+        <ul>
             <li>Whisky Jack Daniel's - 8€</li>
             <li>Rhum Havana Club - 7€</li>
             <li>Vodka Grey Goose - 9€</li>
@@ -46,8 +121,8 @@
             <li>Tequila Patrón - 10€</li>
         </ul>
 
-        <h2 class="hidden">Softs</h2>
-        <ul class="hidden">
+        <h2>Softs</h2>
+        <ul>
             <li>Coca-Cola - 3€</li>
             <li>Sprite - 3€</li>
             <li>Orangina - 3€</li>
