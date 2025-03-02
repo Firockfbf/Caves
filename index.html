@@ -22,7 +22,7 @@
             background: #222;
             color: #ff9900;
             padding: 30px 40px;
-            border-radius: 25px 25px 15px 15px;  /* Arrondi du haut du cadre */
+            border-radius: 25px 25px 15px 15px;  /* Arrondi du haut */
             box-shadow: 0 0 25px rgba(255, 153, 0, 0.7);
             max-width: 700px;
             width: 100%;
@@ -44,6 +44,7 @@
             background-size: cover;
             background-position: center;
             z-index: -1;
+            border-radius: 25px 25px 0 0; /* Arrondi du bas de l'image */
         }
 
         h1 {
@@ -56,6 +57,7 @@
         }
 
         h2 {
+            text-align: center; /* Centrer le titre "Carte" */
             border-bottom: 2px solid #ff9900;
             padding-bottom: 8px;
             margin-top: 20px;
@@ -80,6 +82,8 @@
             font-size: 20px;
             padding: 10px 0;
             transition: color 0.3s, transform 0.3s;
+            display: flex;
+            justify-content: space-between; /* Pour afficher le prix à droite */
         }
 
         li:hover {
@@ -103,50 +107,50 @@
     <div class="menu">
         <h1>Les Caves Saint Sabin</h1>
         
-        <h2>Carte</h2> <!-- Titre "Carte" ajouté ici -->
+        <h2>Carte</h2> <!-- Titre "Carte" centré -->
         
         <h2>Cocktails</h2>
         <ul>
-            <li>Mojito - 8€</li>
-            <li>Piña Colada - 9€</li>
-            <li>Tequila Sunrise - 8€</li>
-            <li>Mai Tai - 10€</li>
-            <li>Blue Lagoon - 9€</li>
+            <li><span>Mojito</span><span>12€</span></li>
+            <li><span>Piña Colada</span><span>12€</span></li>
+            <li><span>Tequila Sunrise</span><span>12€</span></li>
+            <li><span>Mai Tai</span><span>12€</span></li>
+            <li><span>Blue Lagoon</span><span>12€</span></li>
         </ul>
 
         <h2>Bières</h2>
         <ul>
-            <li>Heineken - 5€</li>
-            <li>Guinness - 6€</li>
-            <li>Kronenbourg - 4€</li>
-            <li>Chimay Bleue - 7€</li>
-            <li>Leffe Blonde - 6€</li>
+            <li><span>Heineken</span><span>5€</span></li>
+            <li><span>Guinness</span><span>6€</span></li>
+            <li><span>Kronenbourg</span><span>4€</span></li>
+            <li><span>Chimay Bleue</span><span>7€</span></li>
+            <li><span>Leffe Blonde</span><span>6€</span></li>
         </ul>
 
         <h2>Vins</h2>
         <ul>
-            <li>Rouge Bordeaux - 6€</li>
-            <li>Blanc Chardonnay - 7€</li>
-            <li>Rosé de Provence - 6€</li>
-            <li>Champagne Brut - 12€</li>
+            <li><span>Rouge Bordeaux</span><span>6€</span></li>
+            <li><span>Blanc Chardonnay</span><span>7€</span></li>
+            <li><span>Rosé de Provence</span><span>6€</span></li>
+            <li><span>Champagne Brut</span><span>12€</span></li>
         </ul>
 
         <h2>Spiritueux</h2>
         <ul>
-            <li>Whisky Jack Daniel's - 8€</li>
-            <li>Rhum Havana Club - 7€</li>
-            <li>Vodka Grey Goose - 9€</li>
-            <li>Gin Bombay Sapphire - 8€</li>
-            <li>Tequila Patrón - 10€</li>
+            <li><span>Whisky Jack Daniel's</span><span>8€</span></li>
+            <li><span>Rhum Havana Club</span><span>7€</span></li>
+            <li><span>Vodka Grey Goose</span><span>9€</span></li>
+            <li><span>Gin Bombay Sapphire</span><span>8€</span></li>
+            <li><span>Tequila Patrón</span><span>10€</span></li>
         </ul>
 
         <h2>Softs</h2>
         <ul>
-            <li>Coca-Cola - 3€</li>
-            <li>Sprite - 3€</li>
-            <li>Orangina - 3€</li>
-            <li>Perrier - 3€</li>
-            <li>Jus d'orange - 4€</li>
+            <li><span>Coca-Cola</span><span>3€</span></li>
+            <li><span>Sprite</span><span>3€</span></li>
+            <li><span>Orangina</span><span>3€</span></li>
+            <li><span>Perrier</span><span>3€</span></li>
+            <li><span>Jus d'orange</span><span>4€</span></li>
         </ul>
     </div>
 </body>
