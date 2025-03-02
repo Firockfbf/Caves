@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Caves Saint Sabin - Carte du Bar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #ff9900;
+            margin: 20px;
+            text-align: center;
+        }
+        .menu {
+            max-width: 600px;
+            margin: auto;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 153, 0, 0.5);
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            color: #ff9900;
+            text-transform: uppercase;
+            font-size: 32px;
+            animation: glow 1.5s infinite alternate;
+        }
+        h2 {
+            border-bottom: 2px solid #ff9900;
+            padding-bottom: 5px;
+            margin-top: 20px;
+            color: #ff9900;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 8px 0;
+            font-size: 18px;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #ff9900; }
+            to { text-shadow: 0 0 15px #ff6600; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <h1>Les Caves Saint Sabin</h1>
+        
+        <h2>Cocktails</h2>
+        <ul>
+            <li>Mojito - 8€</li>
+            <li>Piña Colada - 9€</li>
+            <li>Tequila Sunrise - 8€</li>
+            <li>Mai Tai - 10€</li>
+            <li>Blue Lagoon - 9€</li>
+        </ul>
+
+        <h2>Bières</h2>
+        <ul>
+            <li>Heineken - 5€</li>
+            <li>Guinness - 6€</li>
+            <li>Kronenbourg - 4€</li>
+            <li>Chimay Bleue - 7€</li>
+            <li>Leffe Blonde - 6€</li>
+        </ul>
+
+        <h2>Vins</h2>
+        <ul>
+            <li>Rouge Bordeaux - 6€</li>
+            <li>Blanc Chardonnay - 7€</li>
+            <li>Rosé de Provence - 6€</li>
+            <li>Champagne Brut - 12€</li>
+        </ul>
+
+        <h2>Spiritueux</h2>
+        <ul>
+            <li>Whisky Jack Daniel's - 8€</li>
+            <li>Rhum Havana Club - 7€</li>
+            <li>Vodka Grey Goose - 9€</li>
+            <li>Gin Bombay Sapphire - 8€</li>
+            <li>Tequila Patrón - 10€</li>
+        </ul>
+
+        <h2>Softs</h2>
+        <ul>
+            <li>Coca-Cola - 3€</li>
+            <li>Sprite - 3€</li>
+            <li>Orangina - 3€</li>
+            <li>Perrier - 3€</li>
+            <li>Jus d'orange - 4€</li>
+        </ul>
+    </div>
+</body>
+</html>
