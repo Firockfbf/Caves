@@ -29,18 +29,20 @@
             animation: fadeIn 1s ease-in-out;
             position: relative;
             z-index: 2;
+            overflow: hidden;
         }
 
-        /* Voûte en arrière-plan */
+        /* Voûte en arrière-plan - Image */
         .menu:before {
             content: '';
             position: absolute;
-            top: -30px;
+            top: -60px;
             left: 0;
             width: 100%;
-            height: 60px;
-            background: radial-gradient(ellipse at bottom, #222, transparent);
-            border-radius: 50%;
+            height: 150px;
+            background-image: url('caves.jpg'); /* Image caves.jpg dans le même dossier */
+            background-size: cover;
+            background-position: center;
             z-index: -1;
         }
 
