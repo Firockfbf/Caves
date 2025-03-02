@@ -22,7 +22,7 @@
             background: #222;
             color: #ff9900;
             padding: 30px 40px;
-            border-radius: 25px 25px 15px 15px;  /* Arrondi du haut */
+            border-radius: 25px 25px 15px 15px;
             box-shadow: 0 0 25px rgba(255, 153, 0, 0.7);
             max-width: 700px;
             width: 100%;
@@ -32,7 +32,6 @@
             overflow: hidden;
         }
 
-        /* Voûte en arrière-plan - Image */
         .menu:before {
             content: '';
             position: absolute;
@@ -40,11 +39,11 @@
             left: 0;
             width: 100%;
             height: 150px;
-            background-image: url('caves.jpg'); /* Image caves.jpg dans le même dossier */
+            background-image: url('caves.jpg');
             background-size: cover;
             background-position: center;
             z-index: -1;
-            border-radius: 25px 25px 0 0; /* Arrondi du bas de l'image */
+            border-radius: 25px 25px 0 0;
         }
 
         h1 {
@@ -57,7 +56,7 @@
         }
 
         h2 {
-            text-align: center; /* Centrer le titre "Carte" */
+            text-align: center;
             border-bottom: 2px solid #ff9900;
             padding-bottom: 8px;
             margin-top: 20px;
@@ -72,6 +71,18 @@
             color: #ff6600;
         }
 
+        .category {
+            margin-top: 30px; /* Ajout d'espace entre le titre "Carte" et les catégories */
+        }
+
+        .category-title {
+            display: flex;
+            justify-content: space-between; /* Pour le nom de la catégorie à gauche et le prix à droite */
+            font-size: 22px;
+            padding-bottom: 5px;
+            margin-top: 15px;
+        }
+
         ul {
             list-style: none;
             padding: 0;
@@ -83,7 +94,7 @@
             padding: 10px 0;
             transition: color 0.3s, transform 0.3s;
             display: flex;
-            justify-content: space-between; /* Pour afficher le prix à droite */
+            justify-content: space-between;
         }
 
         li:hover {
@@ -107,51 +118,72 @@
     <div class="menu">
         <h1>Les Caves Saint Sabin</h1>
         
-        <h2>Carte</h2> <!-- Titre "Carte" centré -->
-        
-        <h2>Cocktails</h2>
-        <ul>
-            <li><span>Mojito</span><span>12€</span></li>
-            <li><span>Piña Colada</span><span>12€</span></li>
-            <li><span>Tequila Sunrise</span><span>12€</span></li>
-            <li><span>Mai Tai</span><span>12€</span></li>
-            <li><span>Blue Lagoon</span><span>12€</span></li>
-        </ul>
+        <h2>Carte</h2>
 
-        <h2>Bières</h2>
-        <ul>
-            <li><span>Heineken</span><span>5€</span></li>
-            <li><span>Guinness</span><span>6€</span></li>
-            <li><span>Kronenbourg</span><span>4€</span></li>
-            <li><span>Chimay Bleue</span><span>7€</span></li>
-            <li><span>Leffe Blonde</span><span>6€</span></li>
-        </ul>
+        <div class="category">
+            <div class="category-title">
+                <span>Cocktails</span>
+                <span>12€</span> <!-- Prix après "Cocktails" -->
+            </div>
+            <ul>
+                <li><span>Mojito</span><span>12€</span></li>
+                <li><span>Piña Colada</span><span>12€</span></li>
+                <li><span>Tequila Sunrise</span><span>12€</span></li>
+                <li><span>Mai Tai</span><span>12€</span></li>
+                <li><span>Blue Lagoon</span><span>12€</span></li>
+            </ul>
+        </div>
 
-        <h2>Vins</h2>
-        <ul>
-            <li><span>Rouge Bordeaux</span><span>6€</span></li>
-            <li><span>Blanc Chardonnay</span><span>7€</span></li>
-            <li><span>Rosé de Provence</span><span>6€</span></li>
-            <li><span>Champagne Brut</span><span>12€</span></li>
-        </ul>
+        <div class="category">
+            <div class="category-title">
+                <span>Bières</span>
+            </div>
+            <ul>
+                <li><span>Heineken</span><span>5€</span></li>
+                <li><span>Guinness</span><span>6€</span></li>
+                <li><span>Kronenbourg</span><span>4€</span></li>
+                <li><span>Chimay Bleue</span><span>7€</span></li>
+                <li><span>Leffe Blonde</span><span>6€</span></li>
+            </ul>
+        </div>
 
-        <h2>Spiritueux</h2>
-        <ul>
-            <li><span>Whisky Jack Daniel's</span><span>8€</span></li>
-            <li><span>Rhum Havana Club</span><span>7€</span></li>
-            <li><span>Vodka Grey Goose</span><span>9€</span></li>
-            <li><span>Gin Bombay Sapphire</span><span>8€</span></li>
-            <li><span>Tequila Patrón</span><span>10€</span></li>
-        </ul>
+        <div class="category">
+            <div class="category-title">
+                <span>Vins</span>
+            </div>
+            <ul>
+                <li><span>Rouge Bordeaux</span><span>6€</span></li>
+                <li><span>Blanc Chardonnay</span><span>7€</span></li>
+                <li><span>Rosé de Provence</span><span>6€</span></li>
+                <li><span>Champagne Brut</span><span>12€</span></li>
+            </ul>
+        </div>
 
-        <h2>Softs</h2>
-        <ul>
-            <li><span>Coca-Cola</span><span>3€</span></li>
-            <li><span>Sprite</span><span>3€</span></li>
-            <li><span>Orangina</span><span>3€</span></li>
-            <li><span>Perrier</span><span>3€</span></li>
-            <li><span>Jus d'orange</span><span>4€</span></li>
-        </ul>
+        <div class="category">
+            <div class="category-title">
+                <span>Spiritueux</span>
+            </div>
+            <ul>
+                <li><span>Whisky Jack Daniel's</span><span>8€</span></li>
+                <li><span>Rhum Havana Club</span><span>7€</span></li>
+                <li><span>Vodka Grey Goose</span><span>9€</span></li>
+                <li><span>Gin Bombay Sapphire</span><span>8€</span></li>
+                <li><span>Tequila Patrón</span><span>10€</span></li>
+            </ul>
+        </div>
+
+        <div class="category">
+            <div class="category-title">
+                <span>Softs</span>
+            </div>
+            <ul>
+                <li><span>Coca-Cola</span><span>3€</span></li>
+                <li><span>Sprite</span><span>3€</span></li>
+                <li><span>Orangina</span><span>3€</span></li>
+                <li><span>Perrier</span><span>3€</span></li>
+                <li><span>Jus d'orange</span><span>4€</span></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
