@@ -60,7 +60,7 @@
             border-bottom: 2px solid #ff9900;
             padding-bottom: 8px;
             margin-top: 20px;
-            font-size: 28px; /* Taille augmentée */
+            font-size: 28px;
             font-weight: bold;
             text-transform: uppercase;
             color: #ff9900;
@@ -72,16 +72,21 @@
         }
 
         .category {
-            margin-top: 30px; /* Espace entre "Carte" et les catégories */
+            margin-top: 30px;
         }
 
         .category-title {
-            display: flex;
-            justify-content: space-between; /* Pour le nom de la catégorie à gauche et le prix à droite */
             font-size: 22px;
             padding-bottom: 5px;
             margin-top: 15px;
-            border-bottom: 2px solid #ff9900; /* Ligne de séparation */
+            border-bottom: 2px solid #ff9900;
+        }
+
+        .subcategory {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #ff6600;
         }
 
         ul {
@@ -92,15 +97,9 @@
 
         li {
             font-size: 20px;
-            padding: 10px 0;
-            transition: color 0.3s, transform 0.3s;
+            padding: 5px 0;
             display: flex;
             justify-content: space-between;
-        }
-
-        li:hover {
-            color: #ff6600;
-            transform: translateX(10px);
         }
 
         @keyframes glow {
@@ -112,7 +111,6 @@
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
     </style>
 </head>
 <body>
@@ -122,66 +120,47 @@
         <h2>Carte</h2>
 
         <div class="category">
-            <div class="category-title">
-                <span>Cocktails</span>
-            </div>
+            <div class="category-title">Les Classiques (2cL)</div>
+            <div class="subcategory">Vodka</div>
             <ul>
-                <li><span>Mojito</span><span>12€</span></li>
-                <li><span>Piña Colada</span><span>12€</span></li>
-                <li><span>Tequila Sunrise</span><span>12€</span></li>
-                <li><span>Mai Tai</span><span>12€</span></li>
-                <li><span>Blue Lagoon</span><span>12€</span></li>
+                <li><span>Eristoff</span><span>4€</span></li>
+                <li><span>Absolut</span><span>5€</span></li>
+                <li><span>Grey Goose</span><span>6€</span></li>
+            </ul>
+            <div class="subcategory">Whisky</div>
+            <ul>
+                <li><span>William Lawson</span><span>4€</span></li>
+                <li><span>Jack Daniel's (Classic / Honey)</span><span>5€</span></li>
+                <li><span>Monkey Shoulder</span><span>6€</span></li>
             </ul>
         </div>
 
         <div class="category">
-            <div class="category-title">
-                <span>Bières</span>
-            </div>
+            <div class="category-title">Homemades (2cL)</div>
             <ul>
-                <li><span>Heineken</span><span>5€</span></li>
-                <li><span>Guinness</span><span>6€</span></li>
-                <li><span>Kronenbourg</span><span>4€</span></li>
-                <li><span>Chimay Bleue</span><span>7€</span></li>
-                <li><span>Leffe Blonde</span><span>6€</span></li>
+                <li><span>2cL d'alcool + 10cL d'Energy Drink</span><span>7€</span></li>
+                <li><span>Purple Haze</span><span>7€</span></li>
+                <li><span>Kamikaze</span><span>7€</span></li>
+                <li><span>Pistache</span><span>7€</span></li>
+                <li><span>Madeleine</span><span>7€</span></li>
+                <li><span>Baby Guinness</span><span>7€</span></li>
+                <li><span>B52 (Liqueur de café, Baileys, Cointreau)</span><span>7€</span></li>
             </ul>
         </div>
 
         <div class="category">
-            <div class="category-title">
-                <span>Vins</span>
-            </div>
+            <div class="category-title">Softs</div>
             <ul>
-                <li><span>Rouge Bordeaux</span><span>6€</span></li>
-                <li><span>Blanc Chardonnay</span><span>7€</span></li>
-                <li><span>Rosé de Provence</span><span>6€</span></li>
-                <li><span>Champagne Brut</span><span>12€</span></li>
+                <li><span>Jus (Pomme, Fraise, Ananas, Orange, Goyave, Aloé, Cranberry, Citron vert)</span><span>4€</span></li>
+                <li><span>Sodas (Coca-Cola, Coca-Cola Zéro, Perrier, Limonade, Tonic, Ginger Ale)</span><span>4€</span></li>
             </ul>
         </div>
 
         <div class="category">
-            <div class="category-title">
-                <span>Spiritueux</span>
-            </div>
+            <div class="category-title">Autres</div>
             <ul>
-                <li><span>Whisky Jack Daniel's</span><span>8€</span></li>
-                <li><span>Rhum Havana Club</span><span>7€</span></li>
-                <li><span>Vodka Grey Goose</span><span>9€</span></li>
-                <li><span>Gin Bombay Sapphire</span><span>8€</span></li>
-                <li><span>Tequila Patrón</span><span>10€</span></li>
-            </ul>
-        </div>
-
-        <div class="category">
-            <div class="category-title">
-                <span>Softs</span>
-            </div>
-            <ul>
-                <li><span>Coca-Cola</span><span>3€</span></li>
-                <li><span>Sprite</span><span>3€</span></li>
-                <li><span>Orangina</span><span>3€</span></li>
-                <li><span>Perrier</span><span>3€</span></li>
-                <li><span>Jus d'orange</span><span>4€</span></li>
+                <li><span>Energy Drink (Monster, 33cL), Ginger Beer (33cL), Maté (original ou gingembre, 33cL)</span><span>7€</span></li>
+                <li><span>Bouteille d'eau (25cL)</span><span>4€</span></li>
             </ul>
         </div>
     </div>
