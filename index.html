@@ -8,7 +8,7 @@
         body {
             font-family: 'Arial', sans-serif;
             background-color: #111;
-            color: #ff9900;
+            color: #ffd700;
             margin: 0;
             padding: 0;
             display: flex;
@@ -20,10 +20,10 @@
 
         .menu {
             background: #222;
-            color: #ff9900;
+            color: #ffd700;
             padding: 30px 40px;
-            border-radius: 25px 25px 15px 15px;
-            box-shadow: 0 0 25px rgba(255, 153, 0, 0.7);
+            border-radius: 25px;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
             max-width: 700px;
             width: 100%;
             animation: fadeIn 1s ease-in-out;
@@ -32,22 +32,8 @@
             overflow: hidden;
         }
 
-        .menu:before {
-            content: '';
-            position: absolute;
-            top: -60px;
-            left: 0;
-            width: 100%;
-            height: 150px;
-            background-image: url('caves.jpg');
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
-            border-radius: 25px 25px 0 0;
-        }
-
         h1 {
-            color: #ff9900;
+            color: #ffd700;
             text-transform: uppercase;
             font-size: 36px;
             text-align: center;
@@ -57,13 +43,13 @@
 
         h2 {
             text-align: center;
-            border-bottom: 2px solid #ff9900;
+            border-bottom: 2px solid #ffd700;
             padding-bottom: 8px;
             margin-top: 20px;
             font-size: 28px;
             font-weight: bold;
             text-transform: uppercase;
-            color: #ff9900;
+            color: #ffd700;
             transition: color 0.3s;
         }
 
@@ -78,8 +64,8 @@
         .category-title {
             font-size: 22px;
             padding-bottom: 5px;
-            margin-top: 15px;
-            border-bottom: 2px solid #ff9900;
+            margin-top: 40px;
+            border-bottom: 2px solid #ffd700;
         }
 
         .subcategory {
@@ -102,8 +88,13 @@
             justify-content: space-between;
         }
 
+        .price {
+            min-width: 50px;
+            text-align: right;
+        }
+
         @keyframes glow {
-            from { text-shadow: 0 0 5px #ff9900; }
+            from { text-shadow: 0 0 5px #ffd700; }
             to { text-shadow: 0 0 15px #ff6600; }
         }
 
@@ -116,53 +107,99 @@
 <body>
     <div class="menu">
         <h1>Les Caves Saint Sabin</h1>
-        
-        <h2>Carte</h2>
+        <h2>Carte du Bar</h2>
 
         <div class="category">
-            <div class="category-title">Les Classiques (2cL)</div>
+            <div class="category-title">Bières pression</div>
+            <ul>
+                <li>Bière blonde (5,4%)<span class="price">Demi : 5€ - Pinte : 8€</span></li>
+                <li>Polar Monkey IPA (6%)<span class="price">Demi : 5,50€ - Pinte : 9€</span></li>
+            </ul>
+
+            <div class="category-title">Bières en bouteille</div>
+            <ul>
+                <li>1664, Hoegaarden blanche, Magners (cidre)<span class="price">6€</span></li>
+                <li>Desperados, Brewdog IPA, Guinness, La Bête<span class="price">8€</span></li>
+            </ul>
+        </div>
+
+        <div class="category">
+            <div class="category-title">Long Drinks (25cL)</div>
             <div class="subcategory">Vodka</div>
             <ul>
-                <li><span>Eristoff</span><span>4€</span></li>
-                <li><span>Absolut</span><span>5€</span></li>
-                <li><span>Grey Goose</span><span>6€</span></li>
+                <li>Eristoff<span class="price">6€</span></li>
+                <li>Absolut<span class="price">8€</span></li>
+                <li>Grey Goose<span class="price">10€</span></li>
             </ul>
             <div class="subcategory">Whisky</div>
             <ul>
-                <li><span>William Lawson</span><span>4€</span></li>
-                <li><span>Jack Daniel's (Classic / Honey)</span><span>5€</span></li>
-                <li><span>Monkey Shoulder</span><span>6€</span></li>
+                <li>William Lawson<span class="price">6€</span></li>
+                <li>Jack Daniel’s / Jim Beam<span class="price">8€</span></li>
+                <li>Monkey Shoulder<span class="price">10€</span></li>
+            </ul>
+            <div class="subcategory">Rhum</div>
+            <ul>
+                <li>Bacardi Blanc<span class="price">6€</span></li>
+                <li>Bacardi 4 ans / Sailor Jerry<span class="price">8€</span></li>
+                <li>Bacardi 8 ans / Santa Teresa<span class="price">10€</span></li>
+            </ul>
+            <div class="subcategory">Gin</div>
+            <ul>
+                <li>Bombay Dry<span class="price">6€</span></li>
+                <li>Bombay Sapphire<span class="price">8€</span></li>
+                <li>Hendrick’s<span class="price">10€</span></li>
+            </ul>
+            <div class="subcategory">Tequila</div>
+            <ul>
+                <li>Tiscaz<span class="price">6€</span></li>
+                <li>La Patrón Silver<span class="price">8€</span></li>
+                <li>La Patrón Reposado<span class="price">10€</span></li>
+            </ul>
+            <div class="subcategory">Liqueurs</div>
+            <ul>
+                <li>Jägermeister, Gel 27, Absinthe, Sambuca, etc.<span class="price">5€</span></li>
+            </ul>
+            <div class="subcategory">Bombs <span style="font-weight:normal; font-size:16px;">(2cL d'alcool + 10cL d'Energy Drink)</span></div>
+            <ul>
+                <li>Jägerbomb - Firebomb - etc.<span class="price">7€</span></li>
             </ul>
         </div>
 
         <div class="category">
             <div class="category-title">Homemades (2cL)</div>
             <ul>
-                <li><span>2cL d'alcool + 10cL d'Energy Drink</span><span>7€</span></li>
-                <li><span>Purple Haze</span><span>7€</span></li>
-                <li><span>Kamikaze</span><span>7€</span></li>
-                <li><span>Pistache</span><span>7€</span></li>
-                <li><span>Madeleine</span><span>7€</span></li>
-                <li><span>Baby Guinness</span><span>7€</span></li>
-                <li><span>B52 (Liqueur de café, Baileys, Cointreau)</span><span>7€</span></li>
+                <li>Vodka (Eristoff), crème de mûre, citron vert<span class="price">5€</span></li>
+                <li>Vodka (Eristoff), Triple sec, citron vert<span class="price">5€</span></li>
+                <li>Amaretto, Baileys, Curaçao bleu<span class="price">5€</span></li>
+                <li>Amaretto, Cointreau, Ananas<span class="price">5€</span></li>
+                <li>Purple Haze / Kamikaze / Pistache / Madeleine / Baby Guinness / B52<span class="price">5€</span></li>
+            </ul>
+        </div>
+
+        <div class="category">
+            <div class="category-title">Classiques (2cL)</div>
+            <ul>
+                <li>Eristoff<span class="price">4€</span></li>
+                <li>Absolut<span class="price">5€</span></li>
+                <li>Grey Goose<span class="price">7€</span></li>
+                <li>William Lawson<span class="price">4€</span></li>
+                <li>Jack Daniel's (Classic / Honey)<span class="price">5€</span></li>
+                <li>Monkey Shoulder<span class="price">7€</span></li>
+                <li>Bacardi Blanc<span class="price">4€</span></li>
+                <li>Bacardi 4 ans / Sailor Jerry<span class="price">5€</span></li>
+                <li>Bacardi 8 ans / Santa Teresa<span class="price">7€</span></li>
+                <li>Bombay Dry<span class="price">4€</span></li>
+                <li>Bombay Sapphire<span class="price">5€</span></li>
+                <li>Hendrick's<span class="price">7€</span></li>
+                <li>Tiscaz Blanc<span class="price">4€</span></li>
+                <li>La Patrón Silver<span class="price">5€</span></li>
+                <li>La Patrón Reposado<span class="price">7€</span></li>
             </ul>
         </div>
 
         <div class="category">
             <div class="category-title">Softs</div>
             <ul>
-                <li><span>Jus (Pomme, Fraise, Ananas, Orange, Goyave, Aloé, Cranberry, Citron vert)</span><span>4€</span></li>
-                <li><span>Sodas (Coca-Cola, Coca-Cola Zéro, Perrier, Limonade, Tonic, Ginger Ale)</span><span>4€</span></li>
-            </ul>
-        </div>
-
-        <div class="category">
-            <div class="category-title">Autres</div>
-            <ul>
-                <li><span>Energy Drink (Monster, 33cL), Ginger Beer (33cL), Maté (original ou gingembre, 33cL)</span><span>7€</span></li>
-                <li><span>Bouteille d'eau (25cL)</span><span>4€</span></li>
-            </ul>
-        </div>
-    </div>
-</body>
-</html>
+                <li>Jus (Pomme, Fraise, Ananas, Orange, Goyave, Aloé, Cranberry, Citron vert)<span class="price">4€</span></li>
+                <li>Sodas (Coca-Cola, Coca-Cola Zéro, Perrier, Limonade, Tonic, Ginger Ale)<span class="price">4€</span></li>
+                <li>Bouteille d'eau (25cL)<span class="price">4
