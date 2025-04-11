@@ -1,234 +1,196 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les Caves Saint Sabin - Carte du Bar</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #111;
-            color: #ffd700;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-image: linear-gradient(135deg, #111, #333);
-        }
-
-        .menu {
-            background: #222;
-            color: #ffd700;
-            padding: 30px 40px;
-            border-radius: 25px;
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
-            max-width: 700px;
-            width: 100%;
-            animation: fadeIn 1s ease-in-out;
-            position: relative;
-            z-index: 2;
-            overflow: hidden;
-        }
-
-        h1 {
-            color: #ffd700;
-            text-transform: uppercase;
-            font-size: 36px;
-            text-align: center;
-            letter-spacing: 2px;
-            animation: glow 1.5s infinite alternate;
-        }
-
-        h2 {
-            text-align: center;
-            border-bottom: 2px solid #ffd700;
-            padding-bottom: 8px;
-            margin-top: 20px;
-            font-size: 28px;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #ffd700;
-            transition: color 0.3s;
-        }
-
-        h2:hover {
-            color: #ff6600;
-        }
-
-        .category {
-            margin-top: 30px;
-        }
-
-        .category-title {
-            font-size: 22px;
-            padding-bottom: 5px;
-            margin-top: 40px;
-            border-bottom: 2px solid #ffd700;
-        }
-
-        .subcategory {
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 10px;
-            color: #ff6600;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 10px;
-        }
-
-        li {
-            font-size: 20px;
-            padding: 5px 0;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .price {
-            min-width: 50px;
-            text-align: right;
-        }
-
-        @keyframes glow {
-            from { text-shadow: 0 0 5px #ffd700; }
-            to { text-shadow: 0 0 15px #ff6600; }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Caves Saint Sabin - Carte du Bar</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #111;
+      color: #ffd700;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: linear-gradient(135deg, #111, #333);
+    }
+    .menu {
+      background: #222;
+      color: #ffd700;
+      padding: 30px 40px;
+      border-radius: 25px;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+      max-width: 800px;
+      width: 100%;
+    }
+    h1 {
+      color: #ffd700;
+      text-transform: uppercase;
+      font-size: 36px;
+      text-align: center;
+      letter-spacing: 2px;
+      animation: glow 1.5s infinite alternate;
+    }
+    h2 {
+      text-align: center;
+      border-bottom: 2px solid #ffd700;
+      padding-bottom: 8px;
+      margin-top: 40px;
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .category {
+      margin-top: 30px;
+    }
+    .category-title {
+      font-size: 22px;
+      padding-bottom: 5px;
+      margin-top: 30px;
+      border-bottom: 2px solid #ffd700;
+    }
+    .subcategory {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 15px;
+      color: #ff9900;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+    li {
+      font-size: 18px;
+      padding: 5px 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .price {
+      min-width: 50px;
+      text-align: right;
+    }
+    .cocktail-item {
+      margin-bottom: 15px;
+    }
+    .cocktail-name {
+      font-weight: bold;
+      font-size: 20px;
+      color: #ffd700;
+    }
+    .cocktail-desc {
+      font-size: 16px;
+      color: white;
+      margin-left: 10px;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ffd700; }
+      to { text-shadow: 0 0 15px #ff6600; }
+    }
+  </style>
 </head>
 <body>
-    <div class="menu">
-        <h1>Les Caves Saint Sabin</h1>
-        <h2>Carte du Bar</h2>
+  <div class="menu">
+    <h1>Les Caves Saint Sabin</h1>
 
-        <div class="category">
-            <div class="category-title">Bières pression</div>
-            <ul>
-                <li>Bière blonde (5,4%)<span class="price">Demi : 5€ - Pinte : 8€</span></li>
-                <li>Polar Monkey IPA (6%)<span class="price">Demi : 5,50€ - Pinte : 9€</span></li>
-            </ul>
+    <h2>Bières</h2>
+    <ul>
+      <li><span>Pressions - Bière blonde (5,4%)</span><span>Demi : 5€ - Pinte : 8€</span></li>
+      <li><span>Pressions - Polar Monkey (IPA, 6%)</span><span>Demi : 5,50€ - Pinte : 9€</span></li>
+      <li><span>Bouteilles - 1664, Hoegaarden blanche, Magners (cidre)</span><span>6€</span></li>
+      <li><span>Bouteilles - Despérados, Brewdog IPA, Guinness, La Bête</span><span>8€</span></li>
+    </ul>
 
-            <div class="category-title">Bières en bouteille</div>
-            <ul>
-                <li>1664, Hoegaarden blanche, Magners (cidre)<span class="price">6€</span></li>
-                <li>Desperados, Brewdog IPA, Guinness, La Bête<span class="price">8€</span></li>
-            </ul>
-        </div>
+    <h2>Long Drinks - 25cL (4cL d'alcool)</h2>
+    <div class="subcategory">(avec tous les softs disponibles, +2€ pour Energy Drink, Ginger Beer et Maté)</div>
+    <ul>
+      <li><span>Vodka : Eristoff</span><span>8€</span></li>
+      <li><span>Vodka : Absolut</span><span>10€</span></li>
+      <li><span>Vodka : Grey Goose</span><span>12€</span></li>
+      <li><span>Whisky : William Lawson</span><span>8€</span></li>
+      <li><span>Whisky : Jack Daniel’s - Jim Beam</span><span>10€</span></li>
+      <li><span>Whisky : Monkey Shoulder</span><span>12€</span></li>
+      <li><span>Rhum : Bacardi blanc</span><span>8€</span></li>
+      <li><span>Rhum : Bacardi 4 ans - Sailor Jerry</span><span>10€</span></li>
+      <li><span>Rhum : Bacardi 8 ans - Santa Teresa</span><span>12€</span></li>
+      <li><span>Gin : Bombay Dry</span><span>8€</span></li>
+      <li><span>Gin : Bombay Sapphire</span><span>10€</span></li>
+      <li><span>Gin : Hendrick’s</span><span>12€</span></li>
+      <li><span>Tequila : Tiscaz blanc</span><span>8€</span></li>
+      <li><span>Tequila : La Patrón Silver</span><span>10€</span></li>
+      <li><span>Tequila : La Patrón Reposado</span><span>12€</span></li>
+      <li><span>Liqueurs : Jägermeister avec Energy Drink</span><span>10€</span></li>
+    </ul>
 
-        <div class="category">
-            <div class="category-title">Long Drinks (25cL)</div>
-            <div class="subcategory">Vodka</div>
-            <ul>
-                <li>Eristoff<span class="price">6€</span></li>
-                <li>Absolut<span class="price">8€</span></li>
-                <li>Grey Goose<span class="price">10€</span></li>
-            </ul>
-            <div class="subcategory">Whisky</div>
-            <ul>
-                <li>William Lawson<span class="price">6€</span></li>
-                <li>Jack Daniel’s / Jim Beam<span class="price">8€</span></li>
-                <li>Monkey Shoulder<span class="price">10€</span></li>
-            </ul>
-            <div class="subcategory">Rhum</div>
-            <ul>
-                <li>Bacardi Blanc<span class="price">6€</span></li>
-                <li>Bacardi 4 ans / Sailor Jerry<span class="price">8€</span></li>
-                <li>Bacardi 8 ans / Santa Teresa<span class="price">10€</span></li>
-            </ul>
-            <div class="subcategory">Gin</div>
-            <ul>
-                <li>Bombay Dry<span class="price">6€</span></li>
-                <li>Bombay Sapphire<span class="price">8€</span></li>
-                <li>Hendrick’s<span class="price">10€</span></li>
-            </ul>
-            <div class="subcategory">Tequila</div>
-            <ul>
-                <li>Tiscaz<span class="price">6€</span></li>
-                <li>La Patrón Silver<span class="price">8€</span></li>
-                <li>La Patrón Reposado<span class="price">10€</span></li>
-            </ul>
-            <div class="subcategory">Liqueurs</div>
-            <ul>
-                <li>Jägermeister, Gel 27, Absinthe, Sambuca, etc.<span class="price">5€</span></li>
-            </ul>
-            <div class="subcategory">Bombs <span style="font-weight:normal; font-size:16px;">(2cL d'alcool + 10cL d'Energy Drink)</span></div>
-            <ul>
-                <li>Jägerbomb - Firebomb - etc.<span class="price">7€</span></li>
-            </ul>
-        </div>
+    <h2>Softs</h2>
+    <ul>
+      <li><span>Jus : Pomme, Fraise, Ananas, Orange, Goyave, Aloé, Cranberry, Citron vert</span><span>4€</span></li>
+      <li><span>Sodas : Coca-Cola, Coca-Cola Zéro, Perrier, Limonade, Tonic, Ginger Ale</span><span>4€</span></li>
+      <li><span>Autres : Energy Drink (Monster, 33cL), Ginger Beer (33cL), Maté (original ou gingembre, 33cL)</span><span>7€</span></li>
+      <li><span>Bouteille d’eau (25cL)</span><span>4€</span></li>
+    </ul>
 
-        <div class="category">
-            <div class="category-title">Homemades (2cL)</div>
-            <ul>
-                <li>Vodka (Eristoff), crème de mûre, citron vert<span class="price">5€</span></li>
-                <li>Vodka (Eristoff), Triple sec, citron vert<span class="price">5€</span></li>
-                <li>Amaretto, Baileys, Curaçao bleu<span class="price">5€</span></li>
-                <li>Amaretto, Cointreau, Ananas<span class="price">5€</span></li>
-                <li>Purple Haze / Kamikaze / Pistache / Madeleine / Baby Guinness / B52<span class="price">5€</span></li>
-            </ul>
-        </div>
+    <h2>Shooters</h2>
+    <div class="subcategory">Les classiques (2cL)</div>
+    <ul>
+      <li><span>Vodka : Eristoff</span><span>4€</span></li>
+      <li><span>Vodka : Absolut</span><span>5€</span></li>
+      <li><span>Vodka : Grey Goose</span><span>6€</span></li>
+      <li><span>Whisky : William Lawson</span><span>4€</span></li>
+      <li><span>Whisky : Jack Daniel’s (Classic / Fire / Apple / Honey)</span><span>5€</span></li>
+      <li><span>Whisky : Monkey Shoulder</span><span>6€</span></li>
+      <li><span>Rhum : Bacardi blanc</span><span>4€</span></li>
+      <li><span>Rhum : Bacardi 4 ans - Sailor Jerry</span><span>5€</span></li>
+      <li><span>Rhum : Bacardi 8 ans - Santa Teresa</span><span>6€</span></li>
+      <li><span>Gin : Bombay Dry</span><span>4€</span></li>
+      <li><span>Gin : Bombay Sapphire</span><span>5€</span></li>
+      <li><span>Gin : Hendrick’s</span><span>6€</span></li>
+      <li><span>Tequila : Tiscaz blanc</span><span>4€</span></li>
+      <li><span>Tequila : La Patrón Silver</span><span>5€</span></li>
+      <li><span>Tequila : La Patrón Reposado</span><span>6€</span></li>
+      <li><span>Liqueurs : Jägermeister - Get 27 - Absente - Sambuca - etc.</span><span>5€</span></li>
+    </ul>
+    <div class="subcategory">Bombs (2cL d’alcool + 10cL d’Energy Drink)</div>
+    <ul>
+      <li><span>Jägerbomb - Firebomb - etc.</span><span>7€</span></li>
+    </ul>
+    <div class="subcategory">Les "Homemades" (2cL)</div>
+    <ul>
+      <li><span>Purple Haze : Vodka (Eristoff), crème de mûre, citron vert</span><span>5€</span></li>
+      <li><span>Kamikaze : Vodka (Eristoff), Triple sec, citron vert</span><span>5€</span></li>
+      <li><span>Pistache : Amaretto, Baileys, Curaçao bleu</span><span>20€ par 5</span></li>
+      <li><span>Madeleine : Amaretto, Cointreau, Ananas</span><span>Uniquement</span></li>
+      <li><span>Baby Guinness : Liqueur de café, Baileys</span><span>6€</span></li>
+      <li><span>B52 : Liqueur de café, Baileys, Cointreau</span><span>6€</span></li>
+    </ul>
 
-        <div class="category">
-            <div class="category-title">Classiques (2cL)</div>
-            <ul>
-                <li>Eristoff<span class="price">4€</span></li>
-                <li>Absolut<span class="price">5€</span></li>
-                <li>Grey Goose<span class="price">7€</span></li>
-                <li>William Lawson<span class="price">4€</span></li>
-                <li>Jack Daniel's (Classic / Honey)<span class="price">5€</span></li>
-                <li>Monkey Shoulder<span class="price">7€</span></li>
-                <li>Bacardi Blanc<span class="price">4€</span></li>
-                <li>Bacardi 4 ans / Sailor Jerry<span class="price">5€</span></li>
-                <li>Bacardi 8 ans / Santa Teresa<span class="price">7€</span></li>
-                <li>Bombay Dry<span class="price">4€</span></li>
-                <li>Bombay Sapphire<span class="price">5€</span></li>
-                <li>Hendrick's<span class="price">7€</span></li>
-                <li>Tiscaz Blanc<span class="price">4€</span></li>
-                <li>La Patrón Silver<span class="price">5€</span></li>
-                <li>La Patrón Reposado<span class="price">7€</span></li>
-            </ul>
-        </div>
+    <h2>Cocktails - 10€</h2>
+    <div class="cocktail-item"><span class="cocktail-name">Komtuveu :</span><span class="cocktail-desc">Ton alcool, tes allergies, le barman fait le reste !</span></div>
+    <div class="cocktail-item"><span class="cocktail-name">Doxycide :</span><span class="cocktail-desc">Bacardi blanc, Triple sec, sirop de vanille, citron vert, Coca-Cola</span></div>
+    <div class="cocktail-item"><span class="cocktail-name">Gin Genie :</span><span class="cocktail-desc">Bombay Dry, sirop de concombre, citron, Aloé Vera, limonade</span></div>
+    <div class="cocktail-item"><span class="cocktail-name">Bonbon Acidulé :</span><span class="cocktail-desc">Eristoff, cranberry, citron vert, top Energy Drink</span></div>
+    <div class="cocktail-item"><span class="cocktail-name">Mixture Dorée :</span><span class="cocktail-desc">William Lawson, Amaretto, pomme, cannelle</span></div>
+    <div class="cocktail-item"><span class="cocktail-name">Green Card :</span><span class="cocktail-desc">Tiscaz, Curaçao bleu, ananas, citron vert</span></div>
 
-        <div class="category">
-            <div class="category-title">Softs</div>
-            <ul>
-                <li>Jus (Pomme, Fraise, Ananas, Orange, Goyave, Aloé, Cranberry, Citron vert)<span class="price">4€</span></li>
-                <li>Sodas (Coca-Cola, Coca-Cola Zéro, Perrier, Limonade, Tonic, Ginger Ale)<span class="price">4€</span></li>
-                <li>Bouteille d'eau (25cL)<span class="price">4€</span></li>
-                <li>Red Bull<span class="price">5€</span></li>
-                <li>Energy Drink (Autres marques)<span class="price">4€</span></li>
-            </ul>
-        </div>
+    <h2>Cocktails - 12€</h2>
+    <div class="cocktail-item"><span class="cocktail-name">Put’Rousse :</span><span class="cocktail-desc">Jägermeister, crème de pêche, cranberry, Energy Drink</span></div>
+    <div class="cocktail-item"><span class="cocktail-name">Darkness :</span><span class="cocktail-desc">Tiscaz, Curaçao bleu, violette, cranberry, citron vert</span></div>
+    <div class="cocktail-item"><span class="cocktail-name">Germain Saouplex :</span><span class="cocktail-desc">Absolut, Saint Germain, passion, Aloé, goyave</span></div>
+    <div class="cocktail-item"><span class="cocktail-name">Negroni Twist :</span><span class="cocktail-desc">Bombay Sapphire, Apérol, Martini, orange, cranberry, Tonic</span></div>
+    <div class="cocktail-item"><span class="cocktail-name">Lynchburg Lemonade :</span><span class="cocktail-desc">Jack Daniel’s, Triple sec, sucre de canne, citron vert, limonade</span></div>
+    <div class="cocktail-item"><span class="cocktail-name">Mad Hatter :</span><span class="cocktail-desc">Jack Daniel’s (Fire / Apple / Honey), Triple Sec, cranberry, goyave, sirops mystères</span></div>
 
-        <div class="category">
-            <div class="category-title">Cocktails</div>
-            <ul>
-                <li>Mojito<span class="price">8€</span></li>
-                <li>Piña Colada<span class="price">8€</span></li>
-                <li>Caipirinha<span class="price">8€</span></li>
-                <li>Sex on the Beach<span class="price">8€</span></li>
-                <li>Mai Tai<span class="price">9€</span></li>
-            </ul>
-        </div>
-
-        <div class="category">
-            <div class="category-title">Mocktails</div>
-            <ul>
-                <li>Virgin Mojito<span class="price">6€</span></li>
-                <li>Virgin Piña Colada<span class="price">6€</span></li>
-                <li>Shirley Temple<span class="price">6€</span></li>
-                <li>Fruit Punch<span class="price">6€</span></li>
-                <li>Virgin Mary<span class="price">6€</span></li>
-            </ul>
-        </div>
-    </div>
+    <h2>Mocktails - 6€</h2>
+    <div class="cocktail-item"><span class="cocktail-name">Kesketem :</span><span class="cocktail-desc">Dis ce que tu aimes, tes allergies, on avise !</span></div>
+    <div class="cocktail-item"><span class="cocktail-name">Péché Mignon :</span><span class="cocktail-desc">Orange, cranberry, sirop de pêche</span></div>
+    <div class="cocktail-item"><span class="cocktail-name">Red is Dead :</span><span class="cocktail-desc">Pomme, fraise, sirop de passion</span></div>
+    <div class="cocktail-item"><span class="cocktail-name">Sain’Tits :</span><span class="cocktail-desc">Citron vert, ananas, grenadine, Ginger beer</span></div>
+    <div class="cocktail-item"><span class="cocktail-name">Chantal Goyave :</span><span class="cocktail-desc">Ananas, orange, goyave, sirop de passion</span></div>
+    <div class="cocktail-item"><span class="cocktail-name">Multiprise :</span><span class="cocktail-desc">Pomme, citron vert, caramel, Tonic</span></div>
+  </div>
 </body>
 </html>
